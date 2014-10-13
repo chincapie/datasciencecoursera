@@ -19,7 +19,7 @@ ColumnMean <- function(y, removeNA = TRUE) {
     means[i] <- mean(y[, i], na.rm = removeNA)
   }
   means
-  }
+}
 
 f <- function(a, b) {
   print(a)
