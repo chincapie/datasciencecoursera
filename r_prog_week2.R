@@ -105,3 +105,30 @@ apply(x, 2, quantile, prob = c(0.25, 0.75))
 a <- array(rnorm(2 * 2 * 10), c(2, 2, 10))
 apply(a, c(1, 2), mean)
 rowMeans(a, dims = 2)
+
+# Dates and times in R
+x <- as.Date('1970-01-01')
+x
+unclass(x)
+unclass(as.Date('1970-01-02'))
+class(x)
+str(weekdays)
+str(months)
+str(quarters)
+x <- Sys.time()
+x
+p <- as.POSIXlt(x)
+p
+datestring <- c('October 12, 2014 2:10', 'December 12, 2014 9:10')
+x <- strptime(datestring, '%B %d, %Y %H:%M')
+x
+class(x)
+?strptime  # help page for strptime for details
+
+x <- as.Date('2001-01-01')
+y <- strptime('9 Jan 2003 11:34:21', '%d %b %Y %H:%M:%S')
+x
+y
+x - y
+y <- as.Date(y)
+x - y
