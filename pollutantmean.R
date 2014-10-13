@@ -28,5 +28,5 @@ pollutantmean <- function (directory, pollutant, id = 1:332) {
         filepaths <- file.path(directory, filenames)
         list.dfs <- lapply(filepaths, read.csv)
         df <- plyr::ldply(list.dfs)
-        mean(df[, pollutant], na.rm = TRUE)
+        round(mean(df[, pollutant], na.rm = TRUE), 3)
 }
