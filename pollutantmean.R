@@ -21,9 +21,7 @@ pollutantmean <- function (directory, pollutant, id = 1:332) {
   
     ## return the mean of the pollutant across all monitors list in the 'id' vector
     ## (ignoring NA values)
-    
-    ## use data.table package to read in data with fread
-  
+   
         filenames <- sprintf("%03d.csv", id)
         filepaths <- file.path(directory, filenames)
         list.dfs <- lapply(filepaths, read.csv)
