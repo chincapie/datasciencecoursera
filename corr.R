@@ -28,7 +28,7 @@ corr <- function (directory, threshold = 0) {
   
         compute.cor <- function(obs) {
                   cc <- complete.cases(obs)
-                  round(cor(obs[cc, ]$sulfate, obs[cc, ]$nitrate), digits = 5)
+                  cor(obs[cc, ]$sulfate, obs[cc, ]$nitrate)
         }
   
         sapply(ids.threshold, compute.cor)
